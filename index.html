@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <script src="https://kit.fontawesome.com/c33b6f31d3.js" crossorigin="anonymous"></script>
+    
 
 </head>
 <body>
@@ -139,59 +140,62 @@
 
 
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column-left">
-                    <div class="text">Get in Touch</div>
-
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Aaditya</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Bhiwani,Haryana</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">am4213970@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-
-                <br>
-
-
-
-                <div class="column-right">
-                    <div class="text"></div>
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <input type="text" name="phone" placeholder="Phone Number" required>
-                        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn-btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
+  <!-- contact section start -->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">Contact me</h2>
+      <div class="contact-content">
+        <div class="column-left">
+          <div class="text">Get in Touch</div>
+          <div class="icons">
+            <div class="row">
+              <i class="fas fa-user"></i>
+              <div class="info">
+                <div class="head">Name</div>
+                <div class="sub-title">Aaditya</div>
+              </div>
             </div>
-
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <div class="head">Address</div>
+                <div class="sub-title">Bhiwani, Haryana</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">am4213970@gmail.com</div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </section>
+        <div class="column-right">
+          <form name="submit-to-google-sheet" onsubmit="clearForm(event)">
+            <div class="text">Send me a message</div>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <input type="text" name="Phone" placeholder="Phone Number" required>
+            <textarea name="Message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    function clearForm(event) {
+      event.preventDefault(); // Prevent form submission
+  
+      // Clear the form fields
+      document.querySelector('form[name="submit-to-google-sheet"]').reset();
+    }
+  </script>
+  
+  
 
     <!-- footer section start -->
     <footer class="footer-icon">
@@ -214,6 +218,9 @@
         <div class="copyright">
             <p class="footer_copy">	&#169; All right reserved 2023</p>
         </div>
+         
+        
+        
 
     </footer>
 
@@ -234,7 +241,8 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
+      
 
 </body>
 </html>

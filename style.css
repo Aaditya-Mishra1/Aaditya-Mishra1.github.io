@@ -384,49 +384,57 @@ section .title::after {
 
 
 /* contact section styling */
-.contact .contact-content{
+.contact .contact-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-
 .contact .title::after {
   content: "get in touch";
 }
+
 .contact .contact-content .column {
   width: calc(50% - 30px);
 }
+
 .contact .contact-content .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .contact .contact-content .left p {
   text-align: justify;
 }
+
 .contact .contact-content .left .icons {
   margin: 10px 0;
 }
+
 .contact .contact-content .row {
   display: flex;
   height: 65px;
   align-items: center;
 }
+
 .contact .contact-content .row .info {
   margin-left: 30px;
 }
+
 .contact .contact-content .row i {
   font-size: 25px;
   color: crimson;
 }
+
 .contact .contact-content .info .head {
   font-weight: 500;
 }
+
 .contact .contact-content .info .sub-title {
   color: #333;
 }
 
-.btn-btn2{
+.btn.btn2 {
   display: inline-block;
   background: crimson;
   color: #fff;
@@ -438,26 +446,30 @@ section .title::after {
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-.btn-btn2:hover{
+
+.btn.btn2:hover {
   color: crimson;
   background: none;
 }
 
-.contact .contact-content.column-right form{
+.contact .contact-content .column-right form {
   width: 100%;
 }
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: whitesmoke;
-    padding: 15px;
-    margin: 15px 0;
-    color: #111;
-    font-size: 15px;
-    border-radius: 6px;
-    border-color: #111;
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: whitesmoke;
+  padding: 15px;
+  margin: 15px 0;
+  color: #111;
+  font-size: 15px;
+  border-radius: 6px;
+  border-color: #111;
 }
+
 /* footer section styling */
 footer {
   background: #111;
@@ -474,6 +486,93 @@ footer span a:hover {
 }
 
 
+/* contact section styling */
+.contact .contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact .title::after {
+  content: "get in touch";
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: crimson;
+}
+
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title {
+  color: #333;
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  color: crimson;
+  background: none;
+}
+
+.contact .contact-content .column-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: whitesmoke;
+  padding: 15px;
+  margin: 15px 0;
+  color: #111;
+  font-size: 15px;
+  border-radius: 6px;
+  border-color: #111;
+}
+
 /* responsive media query start */
 @media (max-width: 1104px) {
   .about .about-content .left img {
@@ -487,14 +586,17 @@ footer span a:hover {
     padding: 0 50px;
   }
 }
+
 @media (max-width: 947px) {
   .menu-btn {
     display: block;
     z-index: 999;
   }
+
   .menu-btn i.active:before {
     content: "\f00d";
   }
+
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -506,49 +608,66 @@ footer span a:hover {
     padding-top: 80px;
     transition: all 0.3s ease;
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
   }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }
+
   .home .home-content .text-3 {
     font-size: 35px;
   }
+
   .home .home-content a {
     font-size: 23px;
     padding: 10px 30px;
   }
+
   .max-width {
     max-width: 930px;
   }
+
   .about .about-content .column {
     width: 100%;
   }
+
   .about .about-content .left {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
   }
+
   .about .about-content .right {
     flex: 100%;
   }
+
   .Hobbies .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
+
   .skills .skills-content .column,
   .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
+  }
+
+  .contact .column-right {
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }
 
@@ -556,15 +675,19 @@ footer span a:hover {
   .max-width {
     padding: 0 23px;
   }
+
   .home .home-content .text-2 {
     font-size: 60px;
   }
+
   .home .home-content .text-3 {
     font-size: 32px;
   }
+
   .home .home-content a {
     font-size: 20px;
   }
+
   .Hobbies .serv-content .card {
     width: 100%;
   }
@@ -574,23 +697,29 @@ footer span a:hover {
   .home .home-content .text-2 {
     font-size: 50px;
   }
+
   .home .home-content .text-3 {
     font-size: 27px;
   }
+
   .about .about-content .column-right .text,
   .skills .skills-content .left .text {
     font-size: 19px;
   }
+
   .contact .column-right form .fields {
     flex-direction: column;
   }
+
   .contact .column-right form .name,
   .contact .column-right form .email {
     margin: 0;
   }
+
   .column-right form .error-box {
     width: 150px;
   }
+
   .scroll-up-btn {
     right: 15px;
     bottom: 15px;
@@ -599,7 +728,9 @@ footer span a:hover {
     font-size: 23px;
     line-height: 38px;
   }
-  form input, form textarea{
+
+  form input,
+  form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -610,11 +741,10 @@ footer span a:hover {
     font-size: 15px;
     border-radius: 15px;
     border-color: #111;
-}
-  
+  }
 }
 
-#msg{
+#msg {
   color: black;
   display: block;
 }
