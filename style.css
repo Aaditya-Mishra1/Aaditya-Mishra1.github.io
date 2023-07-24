@@ -266,46 +266,116 @@ section .title::after {
   color: #fff;
   background: #111;
 }
+
 .Hobbies .title::before,
 .Favourites .title::before {
   background: #fff;
 }
+
 .Hobbies .title::after,
 .Favourites .title::after {
   background: #111;
   content: "what i do";
 }
-.Hobbies .serv-content .card {
-  width: calc(33% - 20px);
+
+.Hobbies .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.project-card {
+  flex: 0 0 33%;
+  max-width: calc(33% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Hobbies .carousel .card {
   background: #222;
   text-align: center;
   border-radius: 6px;
-  padding: 50px 25px;
+  padding: 10px; /* Adjust padding as needed */
   cursor: pointer;
   transition: all 0.3s ease;
+  height: 550px; /* Set a fixed height for all cards */
 }
-.Hobbies .serv-content .card:hover {
+
+.Hobbies .carousel .card:hover {
   background: crimson;
 }
-.Hobbies .serv-content .card .box {
+
+.Hobbies .carousel .card .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
-.Hobbies .serv-content .card:hover .box {
+
+.Hobbies .carousel .card:hover .box {
   transform: scale(1.05);
 }
-.Hobbies .serv-content .card i {
+
+.Hobbies .carousel .card i {
   font-size: 50px;
   color: crimson;
+  margin-bottom: 15px;
   transition: color 0.3s ease;
 }
-.Hobbies .serv-content .card:hover i {
+
+.Hobbies .carousel .card:hover i {
   color: #fff;
 }
-.Hobbies .serv-content .card .text {
+
+.Hobbies .carousel .card .text {
+  color: #fff;
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
+.Hobbies .carousel .card p {
+  flex: 1;
+}
+
+.Hobbies .carousel .card .learn-more {
+  display: none; /* Hide the anchor tags */
+}
+
+.Hobbies .carousel {
+  animation: slide 10s infinite; /* Adjust the duration as needed */
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid crimson !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: crimson !important;
+}
+
 
 /* skills section styling */
 
