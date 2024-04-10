@@ -818,3 +818,163 @@ form textarea {
   color: black;
   display: block;
 }
+
+/* Experience section styling */
+.experience {
+  color: #fff;
+  background: #111;
+}
+
+.experience .title::before {
+  background: #fff;
+}
+
+.experience .title::after {
+  background: #111;
+  content: "My Experience";
+}
+
+.experience .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.project-card {
+  flex: 0 0 33%;
+  max-width: calc(33% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.experience .carousel .card {
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px; /* Adjust padding as needed */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 455px; /* Set a fixed height for all cards */
+}
+
+.experience .carousel .card:hover {
+  background: crimson;
+}
+
+.experience .carousel .card .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.experience .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.experience .carousel .card i {
+  font-size: 50px;
+  color: crimson;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.experience .carousel .card:hover i {
+  color: #fff;
+}
+
+.experience .carousel .card .text {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.experience .carousel .card p {
+  flex: 1;
+}
+
+.experience .carousel .card a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.experience .carousel .card a:hover {
+  color: crimson;
+  background: none;
+}
+
+.experience .carousel {
+  animation: slide 10s infinite; /* Adjust the duration as needed */
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid crimson !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: crimson !important;
+}
+.experience .carousel .card a:hover {
+  color: #fff; /* Change text color to white */
+  background: crimson;
+}
+.experience .carousel .card img {
+  border-radius: 50%; /* Make the image circular */
+  border: 3px solid crimson; /* Add a red border */
+  width: 120px; /* Set the width of the image */
+  height: 120px; /* Set the height of the image */
+  margin: 0 auto 15px; /* Center the image and add space below */
+}
+
+/* Style the scrollbar */
+.experience .carousel::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+  background-color: #222; /* Set the background color */
+}
+
+/* Style the scrollbar track */
+.experience .carousel::-webkit-scrollbar-track {
+  background: #222; /* Set the background color */
+}
+
+/* Style the scrollbar thumb */
+.experience .carousel::-webkit-scrollbar-thumb {
+  background-color: crimson; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Set the border radius */
+}
+
+/* Style the scrollbar thumb when hovering */
+.experience .carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #a52a2a; /* Adjust the color when hovering */
+}
